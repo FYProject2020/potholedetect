@@ -261,9 +261,10 @@ def Infer(img_name, mod):
             for i in range (pos1-1,pos2-1):
                 led[i] = 1
             print("Activated LED : ",led)
-            for i in range(len(tag)):
-                final[i] = final[i] | led[i]
-            print(final) 
+            
+    for i in range(len(tag)):
+        final[i] = final[i] | led[i]
+    print(final) 
        
     max_index = conf_scores.index(max(conf_scores))
     print(output[max_index])
