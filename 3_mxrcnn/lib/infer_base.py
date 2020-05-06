@@ -252,7 +252,7 @@ def Infer(img_name, mod):
             p6 = 875
             p7 = 1000 
             tag = [p0,p1,p2,p3,p4,p5,p6,p7]
-            final = [1]*len(tag)
+            final = [0]*len(tag)
             contag = tag+[x1]+[x2]
             contag.sort()
             pos1 = contag.index(x1)
