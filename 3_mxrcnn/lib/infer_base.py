@@ -248,13 +248,15 @@ def Infer(img_name, mod):
             p2 = 375
             p3 = 500
             p4 = 625
-            p5 = 750 
-            tag = [p0,p1,p2,p3,p4,p5]
+            p5 = 750
+            p6 = 875
+            p7 = 1000 
+            tag = [p0,p1,p2,p3,p4,p5,p6,p7]
             contag = tag+[x1]+[x2]
             contag.sort()
             pos1 = contag.index(x1)
             pos2 = contag.index(x2)
-            led = [0,0,0,0,0]
+            led = [0]*len(tag)
             for i in range (pos1-1,pos2-1):
                 led[i] = 1
             print("Activated LED : ",led)
