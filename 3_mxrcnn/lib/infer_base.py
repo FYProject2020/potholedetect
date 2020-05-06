@@ -238,11 +238,11 @@ def Infer(img_name, mod):
     output = [];
     conf_scores = [];
     for [cls, conf, x1, y1, x2, y2] in det:
-        output.append(conf, [x1, y1, x2, y2]);
+        output.append([conf, [x1, y1, x2, y2]]);
         conf_scores.append(conf)
         if cls > 0 and conf > system_dict["vis_thresh"]:
             print(system_dict["classes"][int(cls)], conf, [x1, y1, x2, y2])
-            print ("All Values")
+            print ("All Va")
     
     
     max_index = conf_scores.index(max(conf_scores))
