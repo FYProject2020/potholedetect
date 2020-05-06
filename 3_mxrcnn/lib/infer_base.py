@@ -244,11 +244,11 @@ def Infer(img_name, mod):
             print(system_dict["classes"][int(cls)], conf, [x1, y1, x2, y2])
             print(x1,x2)
             p0 = 0
-            p1 = 50
-            p2 = 100
-            p3 = 150
-            p4 = 200
-            p5 = 250
+            p1 = 125
+            p2 = 375
+            p3 = 500
+            p4 = 625
+            p5 = 750 
             tag = [p0,p1,p2,p3,p4,p5]
             contag = tag+[x1]+[x2]
             contag.sort()
