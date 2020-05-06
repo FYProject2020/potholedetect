@@ -242,9 +242,23 @@ def Infer(img_name, mod):
         conf_scores.append(conf)
         if cls > 0 and conf > system_dict["vis_thresh"]:
             print(system_dict["classes"][int(cls)], conf, [x1, y1, x2, y2])
-            print ("All Va")
-    
-    
+            print(x1,x2)
+            p0 = 0
+            p1 = 50
+            p2 = 100
+            p3 = 150
+            p4 = 200
+            p5 = 250
+            tag = [p0,p1,p2,p3,p4,p5]
+            contag = tag+[x1]+[x2]
+            contag.sort()
+            pos1 = contag.index(x1)
+            pos2 = contag.index(x2)
+            led = [0,0,0,0,0]
+            for i in range (pos1-1,pos2-1):
+                led[i] = 1
+            print("Activated LED : ",led)
+       
     max_index = conf_scores.index(max(conf_scores))
     print(output[max_index])
     print('max index')
