@@ -1,0 +1,21 @@
+{
+  "opening-tag": "{",
+  "closing-tag": "}",
+  "body": "<html>\n  <header>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n<link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css\" integrity=\"sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp\" crossorigin=\"anonymous\">\n<style>\n.header{margin:20px 0}nav ul.nav-pills li{background-color:#333;border-radius:4px;margin-right:10px}.col-lg-3{width:24%;margin-right:1.333333%}.col-lg-6{width:49%;margin-right:2%}.col-lg-12,.col-lg-3,.col-lg-6{margin-bottom:20px;border-radius:6px;background-color:#f5f5f5;padding:20px}.row .col-lg-3:last-child,.row .col-lg-6:last-child{margin-right:0}footer{padding:20px 0;text-align:center;border-top:1px solid #bbb}\n</style>\n    <title>FYProject2020</title>\n  </header>\n  <body>\n     <main class=\"container\">\n         {}\n </main>\n  <script src=\"js/jquery.min.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js\"></script>\n  </body></html>\n",
+  "header": "<div class=\"header clearfix\">\n  <nav>\n    <ul class=\"nav nav-pills pull-left\">\n      {}\n    </ul>\n  </nav>\n</div>\n",
+  "table-index": "<th class=\"center aligned\" style=\"color: #005EB8\"></th> <th class=\"center aligned\" style=\"color: #005EB8\">Intensity</th><th class=\"center aligned\" style=\"color: #005EB8\">Binary Identification</th> <th class=\"center aligned\" style=\"color: #005EB8\">Location</th> <th class=\"center aligned\" style=\"color: #005EB8\">Map</th>",
+  "table-sum": "<th class=\"center aligned\" style=\"color: #005EB8\"></th> <th class=\"center aligned\" style=\"color: #005EB8\">Cluster Count</th><th class=\"center aligned\" style=\"color: #005EB8\">Max Intensity</th> <th class=\"center aligned\" style=\"color: #005EB8\">Location</th> <th class=\"center aligned\" style=\"color: #005EB8\">Map</th>",
+  "row": "<div class=\"row\">{}</div>\n",
+  "main-content":"<div class=\"main-content\"{}\n </div>",
+  "table": "<div class=\"ui selectable table\" style=\"padding-top:40px; margin: 0px;\">\n{}\n</div>\n",
+  "tablein": "<thead\">\n{}\n</thead>\n",
+  "theading": "<th class=\"col-lg-3 col-sm-4 col-xs-4\" style=\"background-color:#a7d7c5; color: white;\">\n{}\n</div>\n",
+  "trow": "<td class=\"center aligned\">||</a>\n",
+  "list-spec": "<a class=\"btn btn-warning col-xs-10\" href=\"#\" role=\"button\">||</a>\n",
+  "listbutton": "<button class=\"ui medium green button\" href=\"#\" role=\"button\">",
+  "list-sum": "<a class=\"center aligned\"> </a>\n",
+  "small-title": "<h4>||</h4>",
+  "tab" : "<div class=\"ui top menu inverted tot\" style=\"background-color: #003087; border-radius: 0px;width: 85%\"> <span class=\"item\"> </span></div>",
+  "locate" : "<a href=\"{}\n\"><button class=\"ui medium green button\" style=\"color: white; \">locate</button></a>",
+  "text": "<p>||</p>\n"
+}
