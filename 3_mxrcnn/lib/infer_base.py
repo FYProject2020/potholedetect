@@ -241,8 +241,6 @@ def Infer(img_name, mod):
             for i in range (pos1-1,pos2-1):
                 led[i] = 1
             print("Binary Output: ",led)
-            println()
-            println()
             for i in range(len(tag)):
                 final[i] = final[i] | led[i]
     print("LED Summary Activation : ", final)
