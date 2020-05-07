@@ -59,9 +59,6 @@ def set_img_preproc_params(img_short_side=600, img_long_side=1000, mean=(123.68,
     system_dict["img_pixel_stds"] = ast.literal_eval(system_dict["img_pixel_stds"])
 #######################################################################################################################################
 
-
-
-
 #######################################################################################################################################
 def initialize_rpn_params():
     system_dict["rpn_feat_stride"] = 16;
@@ -93,14 +90,11 @@ def initialize_rcnn_params():
     system_dict["rcnn_bbox_stds"] = ast.literal_eval(system_dict["rcnn_bbox_stds"])
 #######################################################################################################################################
 
-
-
 #######################################################################################################################################
 def set_hyper_params(gpus="0", batch_size=1):
     system_dict["gpu"] = gpus.split(",")[0];
     system_dict["rcnn_batch_size"] = batch_size;
 #######################################################################################################################################
-
 
 
 #######################################################################################################################################
@@ -109,9 +103,6 @@ def set_output_params(vis_thresh=0.8, vis=False):
     system_dict["vis"] = vis;
 
 #######################################################################################################################################
-
-
-
 
 #######################################################################################################################################
 def get_vgg16_test(system_dict):
@@ -150,9 +141,6 @@ def get_resnet101_test(system_dict):
 
 
 
-
-
-
 def set_network():
     network = system_dict["network"]
     networks = {
@@ -165,10 +153,6 @@ def set_network():
     
     return networks[network](system_dict)
 #######################################################################################################################################
-
-
-
-
 
 
 def load_model(sym):
@@ -195,11 +179,6 @@ def load_model(sym):
     mod.init_params(arg_params=arg_params, aux_params=aux_params)
 
     return mod;
-
-
-
-
-
 
 
 #######################################################################################################################################
@@ -269,10 +248,10 @@ def Infer(img_name, mod):
     print(output[max_index])
     print('max index')
     
-    if system_dict["vis"]:
-        vis_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
+    # if system_dict["vis"]:
+        # vis_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
     
-    save_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
+    # save_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
 
     return output;
 

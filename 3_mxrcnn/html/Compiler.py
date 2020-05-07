@@ -62,6 +62,6 @@ class Compiler:
 
         os.system(git init)
         os.system(git remote add origin remote https://github.com/FYProject2020/FYProject2020.github.io)
-        os.system(git remote get remote "https://docs.google.com/uc?export=download&confirm=$(wget--keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1FjQ4HGeCKcq0idkXq1JCQ2B501pvxlmb')))
+        os.system(git remote get remote "https://drive.google.com/drive/u/0/folders/1-EdrpLl6Ui-jCG5tZ00vard8Ndbc-mQh download&confirm=$(wget--keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1FjQ4HGeCKcq0idkXq1JCQ2B501pvxlmb')))
         os.system(git push origin master)
  
