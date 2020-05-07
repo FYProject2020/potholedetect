@@ -223,7 +223,6 @@ def Infer(img_name, mod):
         if cls > 0 and conf > system_dict["vis_thresh"]:
             print(" Intensity || X1  || X2 : ")
             print(system_dict["classes"][int(cls)], conf, [x1, x2])
-            print(x1,x2)
             p0 = 0
             p1 = 125
             p2 = 375
@@ -241,6 +240,8 @@ def Infer(img_name, mod):
             for i in range (pos1-1,pos2-1):
                 led[i] = 1
             print("Binary Output: ",led)
+            print('\n')
+            print('\n')
             for i in range(len(tag)):
                 final[i] = final[i] | led[i]
     print("LED Summary Activation : ", final)
