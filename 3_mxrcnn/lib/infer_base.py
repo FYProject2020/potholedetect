@@ -221,7 +221,8 @@ def Infer(img_name, mod):
         output.append([conf, [x1, y1, x2, y2]]);
         conf_scores.append(conf)
         if cls > 0 and conf > system_dict["vis_thresh"]:
-            print(system_dict["classes"][int(cls)], conf, [x1, y1, x2, y2])
+            print(" Intensity || X1  || X2 : ")
+            print(system_dict["classes"][int(cls)], conf, [x1, x2])
             print(x1,x2)
             p0 = 0
             p1 = 125
@@ -239,19 +240,20 @@ def Infer(img_name, mod):
             led = [0]*len(tag)
             for i in range (pos1-1,pos2-1):
                 led[i] = 1
-            print("Activated LED : ",led)
+            print("Binary Output: ",led)
+            println()
+            println()
             for i in range(len(tag)):
                 final[i] = final[i] | led[i]
-            print(final) 
+    print("LED Summary Activation : ", final)
        
     max_index = conf_scores.index(max(conf_scores))
-    print(output[max_index])
-    print('max index')
+    print("Most Intensive : ", output[max_index])
     
     # if system_dict["vis"]:
         # vis_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
     
-    # save_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
+    save_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
 
     return output;
 
