@@ -237,41 +237,37 @@ def Infer(img_name, mod):
 
     output = [];
     conf_scores = [];
+    final = [0]*8
     for [cls, conf, x1, y1, x2, y2] in det:
         output.append([conf, [x1, y1, x2, y2]]);
         conf_scores.append(conf)
-        print(x1,x2)
-        p0 = 0
-        p1 = 125
-        p2 = 375
-        p3 = 500
-        p4 = 625
-        p5 = 750
-        p6 = 875
-        p7 = 1000 
-        tag = [p0,p1,p2,p3,p4,p5,p6,p7]
-        final = [0]*len(tag)
-        contag = tag+[x1]+[x2]
-        contag.sort()
-        pos1 = contag.index(x1)
-        pos2 = contag.index(x2)
-        led = [0]*len(tag)
-        for i in range (pos1-1,pos2-1):
-            led[i] = 1
-        print("Activated LED : ",led)
-
-        for i in range(len(tag)):
-            final[i] = final[i] | led[i]
-        print(final)
-
-
         if cls > 0 and conf > system_dict["vis_thresh"]:
             print(system_dict["classes"][int(cls)], conf, [x1, y1, x2, y2])
-             
+            print(x1,x2)
+            p0 = 0
+            p1 = 125
+            p2 = 375
+            p3 = 500
+            p4 = 625
+            p5 = 750
+            p6 = 875
+            p7 = 1000 
+            tag = [p0,p1,p2,p3,p4,p5,p6,p7]
+            contag = tag+[x1]+[x2]
+            contag.sort()
+            pos1 = contag.index(x1)
+            pos2 = contag.index(x2)
+            led = [0]*len(tag)
+            for i in range (pos1-1,pos2-1):
+                led[i] = 1
+            print("Activated LED : ",led) 
        
     max_index = conf_scores.index(max(conf_scores))
     print(output[max_index])
-
+    print('max index')
+    for i in range(len(tag)):
+        final[i] = final[i] | led[i]
+    print(final)
     
     if system_dict["vis"]:
         vis_detection(im_orig, det, system_dict["classes"], thresh=system_dict["vis_thresh"])
